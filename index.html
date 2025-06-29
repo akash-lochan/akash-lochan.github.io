@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+<body>
+    <div class="hero-header" id="home">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Akash Lochan</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/Temp_Picture.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5> Hi I'm a <span class="input"> Game Developer :D</span></h5>
+                    <h1>Akash Lochan</h1>
+                    <div class="btn-group">
+                        <a href="" class="btn">Download cv</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="wrapper">
+            <h2>About Me</h2>
+            <p>About me Section wkaj fnhhakuwagwagwah</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="wrapper">
+            <h2>Projects</h2>
+
+            <div class="project-display">
+                <div class="project-video">
+                </div>
+                <div class="project-info">
+                    <h3 id="project-title">Project Title</h3>
+                    <p id="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+
+        <div class="carousel-container">
+            <button class="carousel-btn prev">&#10094</button>
+            <div class="carousel-track">
+                <div class="project-card" data.target="project1-detail"
+                data-title="Project 1"
+                data-description="Description of Project 1"
+                data-video="videos/video1.mp4"
+                data-target="project1-detail">
+                    <img src="images/Temp_Picture.jpg" alt="Project 1">
+                </div>
+                <div class="project-card" data.target="project2-detail"
+                data-title="Project 1"
+                data-description="Description of Project 2"
+                data-video="videos/video1.mp4"
+                data-target="project1-detail">
+                    <img src="images/Temp_Picture.jpg" alt="Project 2">
+                </div>
+                <div class="project-card" data.target="project3-detail"
+                data-title="Project 1"
+                data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                data-video="videos/Temp_Video.mp4"
+                data-target="project1-detail">
+                    <img src="images/Temp_Picture.jpg" alt="Project 3">
+                </div>
+                <div class="project-card" data.target="project4-detail"
+                data-title="Project 1"
+                data-description="Description of Project 4"
+                data-video="videos/video1.mp4"
+                data-target="project1-detail">
+                    <img src="images/Temp_Picture.jpg" alt="Project 4">
+                </div>
+            </div>
+            <button class="carousel-btn next">&#10095</button>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="wrapper">
+            <h2>Contact</h2>
+            <p>Contact Section wkaj fnhhakuwagwagwah</p>
+        </div>
+    </section>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelectorAll(".navlinks li");
+        
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+
+        var typed=new Typed(".input" ,{
+            strings: ["Game Developer", "Game Developer", "Game Developer", "Game Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true,
+        })
+    </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const carouselTrack = document.querySelector('.carousel-track');
+  const cards = Array.from(document.querySelectorAll('.project-card'));
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  const videoContainer = document.querySelector('.project-video');
+  const mediaPrevBtn = document.createElement('button');
+  const mediaNextBtn = document.createElement('button');
+
+  let activeIndex = 0;
+  let currentMediaIndex = 0;
+
+  // Media data (add images/videos here for each project)
+  const mediaData = [
+    [ // Project 1
+      { type: 'video', src: 'videos/video1.mp4' },
+      { type: 'image', src: 'images/img1.jpg' },
+      { type: 'image', src: 'images/img2.jpg' },
+    ],
+    [ // Project 2
+      { type: 'video', src: 'videos/video2.mp4' },
+      { type: 'image', src: 'images/img3.jpg' },
+    ],
+    [ // Project 3
+      { type: 'video', src: 'videos/Temp_Video.mp4' },
+      { type: 'image', src: 'images/img4.jpg' },
+    ],
+    [ // Project 4
+      { type: 'video', src: 'videos/video1.mp4' },
+      { type: 'image', src: 'images/img5.jpg' },
+    ]
+  ];
+
+  function createMediaElement(media) {
+    if (media.type === 'video') {
+      const video = document.createElement('video');
+      video.controls = true;
+      video.innerHTML = `<source src="${media.src}" type="video/mp4">Your browser does not support the video tag.`;
+      video.style.borderRadius = '10px';
+      video.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
+      video.style.maxWidth = '800px';
+      video.style.width = '100%';
+      return video;
+    } else if (media.type === 'image') {
+      const img = document.createElement('img');
+      img.src = media.src;
+      img.alt = 'Project media';
+      img.style.borderRadius = '10px';
+      img.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
+      img.style.maxWidth = '800px';
+      img.style.width = '100%';
+      return img;
+    }
+  }
+
+  function updateMainMedia() {
+    videoContainer.innerHTML = ''; // Clear previous media
+    const mediaItem = mediaData[activeIndex][currentMediaIndex];
+    const element = createMediaElement(mediaItem);
+    videoContainer.appendChild(mediaPrevBtn);
+    videoContainer.appendChild(element);
+    videoContainer.appendChild(mediaNextBtn);
+  }
+
+  mediaPrevBtn.textContent = '‹';
+  mediaNextBtn.textContent = '›';
+  mediaPrevBtn.classList.add('carousel-btn');
+  mediaNextBtn.classList.add('carousel-btn');
+  mediaPrevBtn.style.left = '0';
+  mediaNextBtn.style.right = '0';
+  mediaPrevBtn.style.top = '50%';
+  mediaNextBtn.style.top = '50%';
+  mediaPrevBtn.style.transform = 'translateY(-50%)';
+  mediaNextBtn.style.transform = 'translateY(-50%)';
+
+  mediaPrevBtn.addEventListener('click', () => {
+    const mediaList = mediaData[activeIndex];
+    currentMediaIndex = (currentMediaIndex - 1 + mediaList.length) % mediaList.length;
+    updateMainMedia();
+  });
+
+  mediaNextBtn.addEventListener('click', () => {
+    const mediaList = mediaData[activeIndex];
+    currentMediaIndex = (currentMediaIndex + 1) % mediaList.length;
+    updateMainMedia();
+  });
+
+  function updateCarousel() {
+    const containerWidth = carouselTrack.parentElement.offsetWidth;
+    const cardWidth = cards[0].offsetWidth + 32; // Approx gap
+    const offset = (containerWidth / 2) - (cardWidth / 2) - (cardWidth * activeIndex);
+
+    carouselTrack.style.transform = `translateX(${offset}px)`;
+
+    cards.forEach((card, idx) => {
+      card.classList.toggle('active', idx === activeIndex);
+    });
+
+    const activeCard = cards[activeIndex];
+    const title = activeCard.getAttribute('data-title');
+    const description = activeCard.getAttribute('data-description');
+
+    document.getElementById('project-title').textContent = title;
+    document.getElementById('project-description').textContent = description;
+
+    currentMediaIndex = 0;
+    updateMainMedia();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % cards.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+    updateCarousel();
+  });
+
+  updateCarousel(); // Initialize
+  window.addEventListener('resize', updateCarousel);
+});
+</script>
+</body>
+</html>
