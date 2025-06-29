@@ -1,13 +1,23 @@
-*{
+*
+{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: poppins,sans-serif;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 25px;
     text-decoration: none;
 }
 body{
     overflow-x: hidden;
 }
+
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 .hero-header{
     width: 100%;
@@ -37,9 +47,9 @@ header{
     align-items: center;
 }
 .logo{
-    height: 45px;
-    width: 45px;
-    background-color: #007ced;
+    height: 60px;
+    width: 60px;
+    background-color: #BF40BF;
     border-radius: 50%;
     color: #fff;
     font-weight: 700;
@@ -69,7 +79,7 @@ nav .togglebtn{
 
 nav .togglebtn span{
     display: block;
-    background-color: #007ced;
+    background-color: #BF40BF;
     margin: 5px 0px;
     width: 100%;
     height: 3px;
@@ -85,7 +95,7 @@ nav .navlinks li{
 }
 
 nav .navlinks li a{
-    color: aqua;
+    color: #BF40BF;
     margin-right: 2.5rem;
 }
 
@@ -97,8 +107,8 @@ nav .navlinks li a{
 }
 
 .container .hero-pic{
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     overflow: hidden;
     border: 15px solid #444;
@@ -127,7 +137,7 @@ nav .navlinks li a{
 }
 
 .hero-text h5 span{
-    color: #007ced;
+    color: #BF40BF;
     font-size: 16px;
 }
 
@@ -152,19 +162,19 @@ nav .navlinks li a{
     margin: 5px 0px;
     margin-right: 7px;
     border-radius: 30px;
-    border: 2px solid #007ced;
+    border: 2px solid #BF40BF;
     box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
 }
 
 .btn-group .btn:hover{
-    background-color: #007ced;
+    background-color: #BF40BF;
     color: #fff;
-    border-color: #007ced;
+    border-color: #BF40BF;
     box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
 }
 
 .btn.activate{
-    border-color:#007ced ;
+    border-color:#BF40BF ;
 }
 
 .hero-text .social i{
@@ -175,7 +185,7 @@ nav .navlinks li a{
 }
 
 .hero-text .social i:hover{
-    color: #007ced;
+    color: #BF40BF;
     transform:rotate(360deg);
 }
 
@@ -257,6 +267,23 @@ section {
 #about{
     background-color: #333;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.profilepic img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.aboutmetext {
+    max-width: 600px;
+    color: pink;
+    margin-top: -400px;
 }
 
 #projects{
@@ -291,7 +318,7 @@ section {
 }
 
 #contact{
-    background-color: #007ced;
+    background-color: #222;
     color: #fff;
 }
 
@@ -309,7 +336,7 @@ section {
     width: 100%;
     max-width: 1200px;
     padding: 2rem 1rem;
-    margin: 5rem auto 0 auto;
+    margin: -4rem auto 0 auto;
 }
 
 .carousel-track{
@@ -377,7 +404,7 @@ section {
 .project-video video{
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
     height: auto;
 }
@@ -393,7 +420,7 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     margin: 2rem auto;
 }
 
@@ -402,7 +429,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
-    background: rgba(0, 90, 0, 90);
+    background: #FF69B4;
     border: none;
     font-size: 2rem;
     color: white;

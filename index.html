@@ -7,6 +7,9 @@
         <title>Portfolio Website</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jersey+15&display=swap" rel="stylesheet">
     </head>
 <body>
     <div class="hero-header" id="home">
@@ -42,8 +45,8 @@
                     </div>
 
                     <div class="social">
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Fristey" target = "_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/akash-lochan-50a8161a9" target = "_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -51,10 +54,14 @@
     </div>
 
     <section id="about">
-        <div class="wrapper">
+        
+          <div class="aboutmetext">
             <h2>About Me</h2>
-            <p>About me Section wkaj fnhhakuwagwagwah</p>
-        </div>
+            <p>My name is Akash, I am a GameDeveloper in Unity, mainly working with C#. I also have coding experience with HTML & CSS.</p>
+          </div>
+          <div class="profilepic">
+            <img src="images/Temp_Picture.jpg" alt="profile pic">
+          </div>
     </section>
 
     <section id="projects">
@@ -74,32 +81,36 @@
             <button class="carousel-btn prev">&#10094</button>
             <div class="carousel-track">
                 <div class="project-card" data.target="project1-detail"
-                data-title="Project 1"
-                data-description="Description of Project 1"
+                data-title="Cooking Sandra"
+                data-description="In this game you play as a chef named Sandra. While playing you get orders which each have a time limit, and based on how fast you complete the orders you get points. You can complete orders by preparing ingredients by playing various minigames. "
                 data-video="videos/video1.mp4"
                 data-target="project1-detail">
-                    <img src="images/Temp_Picture.jpg" alt="Project 1">
+                    <img src="images/Sandra.png" alt="Project 1">
                 </div>
                 <div class="project-card" data.target="project2-detail"
-                data-title="Project 1"
-                data-description="Description of Project 2"
+                data-title="Diner Disaster"
+                data-description="Running a diner is tough, but it gets even harder when your once-friendly robot employees turn against you! Play as Gir, the proud diner owner, and defend Gir's Diner from a rogue robot uprising.
+
+                Face off against menacing waiters, hostile drones, and the head chef across three levels. Can you survive the chaos and save your beloved diner?
+                
+                Take on the enemies and show them who's boss!"
                 data-video="videos/video1.mp4"
                 data-target="project1-detail">
-                    <img src="images/Temp_Picture.jpg" alt="Project 2">
+                    <img src="https://img.itch.zone/aW1nLzE2Njk5NzIxLnBuZw==/original/3BAVUQ.png" alt="Project 2">
                 </div>
                 <div class="project-card" data.target="project3-detail"
-                data-title="Project 1"
-                data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                data-title="Roguelike"
+                data-description="In this game you play as a swordsman and you kill enemies to gain points. You can grab coins while playing to get upgrades to make yourself stronger, to get the highest score possible." 
                 data-video="videos/Temp_Video.mp4"
                 data-target="project1-detail">
                     <img src="images/Temp_Picture.jpg" alt="Project 3">
                 </div>
                 <div class="project-card" data.target="project4-detail"
-                data-title="Project 1"
-                data-description="Description of Project 4"
+                data-title="Eldritch Madness"
+                data-description="In this game you will be playing as a lantern fish trying to survive in a twisted and harsh ocean. After chemicals and toxic waste have tempered with the ocean for good, the creatures in the deep dark have gone wrong. Mutated, glowing fish have turned on eachother, using everything in their power to live. Laserbeams, flying light bulbs, a twisted Kraken, you name it. You just got to be quick and survive."
                 data-video="videos/video1.mp4"
                 data-target="project1-detail">
-                    <img src="images/Temp_Picture.jpg" alt="Project 4">
+                    <img src="https://img.itch.zone/aW1nLzE1NjM1MDMwLnBuZw==/original/E%2BVc%2Fz.png" alt="Project 4">
                 </div>
             </div>
             <button class="carousel-btn next">&#10095</button>
@@ -150,45 +161,63 @@ document.addEventListener('DOMContentLoaded', () => {
   // Media data (add images/videos here for each project)
   const mediaData = [
     [ // Project 1
-      { type: 'video', src: 'videos/video1.mp4' },
+      { type: 'youtube', src: 'https://www.youtube.com/embed/ZRwRrXA0m1k?autoplay=1&mute=1%22%3E' },
       { type: 'image', src: 'images/img1.jpg' },
       { type: 'image', src: 'images/img2.jpg' },
     ],
     [ // Project 2
-      { type: 'video', src: 'videos/video2.mp4' },
-      { type: 'image', src: 'images/img3.jpg' },
+      { type: 'youtube', src: 'https://www.youtube.com/embed/Sm2x2u5IcpQ?autoplay=1&mute=1%22%3E' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTY4OC5wbmc=/original/oZwvLI.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTY4OS5wbmc=/original/z4HWHe.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTcwMC5wbmc=/original/hUPjBC.png' },
     ],
     [ // Project 3
-      { type: 'video', src: 'videos/Temp_Video.mp4' },
+      { type: 'youtube', src: 'https://www.youtube.com/embed/sKpe6155nq8?autoplay=1&mute=1%22%3E'},
       { type: 'image', src: 'images/img4.jpg' },
     ],
     [ // Project 4
-      { type: 'video', src: 'videos/video1.mp4' },
-      { type: 'image', src: 'images/img5.jpg' },
+      { type: 'youtube', src: 'https://www.youtube.com/embed/sbDSPoUuuos?autoplay=1&mute=1%22%3E ' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDY0Mi5wbmc=/original/0zDk97.png' },
     ]
   ];
 
   function createMediaElement(media) {
-    if (media.type === 'video') {
-      const video = document.createElement('video');
-      video.controls = true;
-      video.innerHTML = `<source src="${media.src}" type="video/mp4">Your browser does not support the video tag.`;
-      video.style.borderRadius = '10px';
-      video.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
-      video.style.maxWidth = '800px';
-      video.style.width = '100%';
-      return video;
-    } else if (media.type === 'image') {
-      const img = document.createElement('img');
-      img.src = media.src;
-      img.alt = 'Project media';
-      img.style.borderRadius = '10px';
-      img.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
-      img.style.maxWidth = '800px';
-      img.style.width = '100%';
-      return img;
-    }
+  if (media.type === 'video') {
+    const video = document.createElement('video');
+    video.controls = true;
+    video.innerHTML = `<source src="${media.src}" type="video/mp4">Your browser does not support the video tag.`;
+    video.style.borderRadius = '10px';
+    video.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
+    video.style.maxWidth = '800px';
+    video.style.width = '100%';
+    return video;
+  } else if (media.type === 'image') {
+    const img = document.createElement('img');
+    img.src = media.src;
+    img.alt = 'Project media';
+    img.style.borderRadius = '10px';
+    img.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
+    img.style.maxWidth = '800px';
+    img.style.width = '100%';
+    return img;
+  } else if (media.type === 'youtube') {
+    const iframe = document.createElement('iframe');
+    iframe.src = media.src;
+    iframe.width = "800";
+    iframe.height = "450";  // 16:9 aspect ratio
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    iframe.style.borderRadius = '10px';
+    iframe.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
+    iframe.style.width = '100%';
+    return iframe;
   }
+}
+
 
   function updateMainMedia() {
     videoContainer.innerHTML = ''; // Clear previous media
