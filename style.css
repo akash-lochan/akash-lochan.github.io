@@ -47,8 +47,8 @@ header{
     align-items: center;
 }
 .logo{
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     background-color: #BF40BF;
     border-radius: 50%;
     color: #fff;
@@ -291,6 +291,7 @@ section {
     color: #fff;
 }
 
+
 .project-detail{
     display: none;
     background-color: #111;
@@ -336,7 +337,7 @@ section {
     width: 100%;
     max-width: 1200px;
     padding: 2rem 1rem;
-    margin: -4rem auto 0 auto;
+    margin: -30rem auto 0 auto;
 }
 
 .carousel-track{
@@ -395,7 +396,7 @@ section {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: white;
     padding-left: 2rem;
     max-width: 1200px;
@@ -421,7 +422,7 @@ section {
     align-items: center;
     width: 100%;
     max-width: 600px;
-    margin: 2rem auto;
+    margin: -5rem auto;
 }
 
 .project-video .carousel-btn{
