@@ -337,7 +337,7 @@ section {
     width: 100%;
     max-width: 1200px;
     padding: 2rem 1rem;
-    margin: -30rem auto 0 auto;
+    margin: -27rem auto 0 auto;
 }
 
 .carousel-track{
@@ -413,6 +413,7 @@ section {
 .project-info{
     max-width: 400px;
     text-align: left;
+    margin-top: -5rem;
 }
 
 .project-video{
