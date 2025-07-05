@@ -115,7 +115,11 @@
         </div>
         <h3 class="screenshots-header"></h3>
                   <div class="project-screenshots"> </div>
+                          <div class="socialwork">
+          <a href="https://github.com/Fristey" target = "_blank"><i class="fa-brands fa-github"></i></a>
         </div>
+        </div>
+
     </section>
 
     <section id="contact">
@@ -224,6 +228,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
   ]
 
+  const githubLinks = [
+    'https://github.com/Fristey',
+    'https://github.com/Fristey',
+    'https://github.com/Fristey',
+    'https://github.com/Fristey',];
+    
+
   const screenshotHeaders = [
   "Cooking Sandra – Code Snippets",
   "Diner Disaster – Code Snippets",
@@ -331,6 +342,8 @@ function updateScreenshots() {
     document.getElementById('project-title').textContent = title;
     document.getElementById('project-description').innerHTML = description;
     document.querySelector('.screenshots-header').textContent = screenshotHeaders[activeIndex];
+    document.querySelector('.socialwork a').href = projectLinks[activeIndex];
+
 
 
     currentMediaIndex = 0;
