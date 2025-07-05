@@ -241,6 +241,12 @@ nav .navlinks li a{
 }
 
 @media(max-width:768px){
+
+    *{
+        font-size: 18px;
+    }
+
+
     .container{
         flex-direction: column;
         padding-top:2rem
@@ -249,6 +255,88 @@ nav .navlinks li a{
         padding:40px 0px;
     }
 
+    .container .hero-pic{
+        width: 300px;
+        height: 300px;
+        border-width: 8px;
+    }
+
+    .aboutmetext{
+        margin-top: 0;
+        padding: 1rem;
+        max-width: 90%;
+    }
+    .profilepic img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+    .project-card {
+    width: 150px;
+  }
+
+    .project-video video,
+  .project-video iframe,
+  .project-video img {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+  }
+
+    .project-video .carousel-btn {
+    position: static;
+    margin: 10px 5px;
+    transform: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+  }
+
+    .project-display {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        padding-left: 0;
+    }
+    .project-video{
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .project-info {
+        margin-top: 1rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .carousel-container{
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+  * {
+    font-size: 16px;
+  }
+  .container .hero-pic {
+    width: 200px;
+    height: 200px;
+    border-width: 6px;
+  }
+    .project-card {
+    width: 120px;
+  }
+    section {
+    padding: 100px 1cap;
+  }
 }
 
 html {
@@ -324,20 +412,13 @@ section {
 }
 
 .carousel-container {
-    /*margin-top: 3rem;
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-    position: relative;
-    overflow : hidden;
-    flex-direction: column;*/
-
     position: relative;
     overflow: hidden;
     width: 100%;
     max-width: 1200px;
     padding: 2rem 1rem;
-    margin: -27rem auto 0 auto;
+    margin: 2rem auto 0 auto;
+    z-index: 2;
 }
 
 .carousel-track{
@@ -413,7 +494,7 @@ section {
 .project-info{
     max-width: 400px;
     text-align: left;
-    margin-top: -5rem;
+    margin-top: 1rem;
 }
 
 .project-video{
@@ -422,8 +503,9 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 600px;
-    margin: -5rem auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 5rem auto;
 }
 
 .project-video .carousel-btn{
@@ -452,6 +534,7 @@ section {
 .project-video video{
     width: 100%;
     height: auto;
+    max-height: 500px;;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

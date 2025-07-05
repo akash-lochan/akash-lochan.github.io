@@ -57,16 +57,7 @@
     <section id="projects">
         <div class="wrapper">
             <h2></h2>
-            <div class="project-display">
-                <div class="project-video">
-                </div>
-                <div class="project-info">
-                    <h3 id="project-title">Project Title</h3>
-                    <p id="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-
-        <div class="carousel-container">
+            <div class="carousel-container">
             <button class="carousel-btn prev">&#10094</button>
             <div class="carousel-track">
                 <div class="project-card" data.target="project1-detail"
@@ -104,6 +95,15 @@
                 </div>
             </div>
             <button class="carousel-btn next">&#10095</button>
+        </div>
+
+        <div class="project-display">
+          <div class="project-video">
+          </div>
+          <div class="project-info">
+            <h3 id="project-title">Project Title</h3>
+            <p id="project-description">Project description will be displayed here.</p>
+          </div>
         </div>
         </div>
     </section>
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateCarousel() {
     const containerWidth = carouselTrack.parentElement.offsetWidth;
-    const cardWidth = cards[0].offsetWidth + 32; // Approx gap
+    const cardWidth = cards[0].offsetWidth + 32; // 
     const offset = (containerWidth / 2) - (cardWidth / 2) - (cardWidth * activeIndex);
 
     carouselTrack.style.transform = `translateX(${offset}px)`;
