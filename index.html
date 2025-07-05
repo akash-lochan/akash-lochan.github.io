@@ -56,13 +56,13 @@
 
     <section id="projects">
         <div class="wrapper">
-            <h2></h2>
+            <h2>Projects</h2>
             <div class="carousel-container">
             <button class="carousel-btn prev">&#10094</button>
             <div class="carousel-track">
                 <div class="project-card" data.target="project1-detail"
                 data-title="Cooking Sandra"
-                data-description="In this game you play as a chef named Sandra. While playing you get orders which each have a time limit, and based on how fast you complete the orders you get points. You can complete orders by preparing ingredients by playing various minigames. "
+                data-description="In this game you play as a chef named Sandra. While playing you get orders which each have a time limit, and based on how fast you complete the orders you get points. You can complete orders by preparing ingredients by playing various minigames."
                 data-video="videos/video1.mp4"
                 data-target="project1-detail">
                     <img src="images/Sandra.png" alt="Project 1">
@@ -73,7 +73,12 @@
 
                 Face off against menacing waiters, hostile drones, and the head chef across three levels. Can you survive the chaos and save your beloved diner?
                 
-                Take on the enemies and show them who's boss!"
+                Take on the enemies and show them who's boss! <br> <br>
+                <strong> Personal Work</strong> <br>
+                Player, Movement, Dash, Shooting, Health<br>
+                Powerups, Explosive knife, Spreadshot<br>
+                GameLoop <br>
+                Keycard and Elevator system"
                 data-video="videos/video1.mp4"
                 data-target="project1-detail">
                     <img src="https://img.itch.zone/aW1nLzE2Njk5NzIxLnBuZw==/original/3BAVUQ.png" alt="Project 2">
@@ -88,7 +93,9 @@
                 </div>
                 <div class="project-card" data.target="project4-detail"
                 data-title="Eldritch Madness"
-                data-description="In this game you will be playing as a lantern fish trying to survive in a twisted and harsh ocean. After chemicals and toxic waste have tempered with the ocean for good, the creatures in the deep dark have gone wrong. Mutated, glowing fish have turned on eachother, using everything in their power to live. Laserbeams, flying light bulbs, a twisted Kraken, you name it. You just got to be quick and survive."
+                data-description="In this game you will be playing as a lantern fish trying to survive in a twisted and harsh ocean. After chemicals and toxic waste have tempered with the ocean for good, the creatures in the deep dark have gone wrong. Mutated, glowing fish have turned on eachother, using everything in their power to live. Laserbeams, flying light bulbs, a twisted Kraken, you name it. You just got to be quick and survive.
+                <br> <br> Personal Work <br>
+                Shooting, Enemies, Light drops from enemies, ScreenBorder, Lantern fish lighting"
                 data-video="videos/video1.mp4"
                 data-target="project1-detail">
                     <img src="https://img.itch.zone/aW1nLzE1NjM1MDMwLnBuZw==/original/E%2BVc%2Fz.png" alt="Project 4">
@@ -104,7 +111,10 @@
             <h3 id="project-title">Project Title</h3>
             <p id="project-description">Project description will be displayed here.</p>
           </div>
+
         </div>
+        <h3 class="screenshots-header"></h3>
+                  <div class="project-screenshots"> </div>
         </div>
     </section>
 
@@ -127,6 +137,9 @@
           </div>
     </section>
 
+<div class="image-modal" id="imageModal">
+  <img src="" alt="Enlarged Screenshot" id="modalImage">
+</div>
 
 
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
@@ -187,6 +200,51 @@ document.addEventListener('DOMContentLoaded', () => {
       { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDY0Mi5wbmc=/original/0zDk97.png' },
     ]
   ];
+
+  const projectScreenshots = [
+    [ // Project 1
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png',
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png',
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png',
+    ],
+    [ // Project 2
+      'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTY4OC5wbmc=/original/oZwvLI.png',
+      'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTY4OS5wbmc=/original/z4HWHe.png',
+      'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTcwMC5wbmc=/original/hUPjBC.png',
+    ],
+    [ // Project 3
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png',
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png',
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png',
+    ],
+    [ // Project 4
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png',
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png',
+      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png',
+    ]
+  ]
+
+  const screenshotHeaders = [
+  "Cooking Sandra – Code Snippets",
+  "Diner Disaster – Code Snippets",
+  "Roguelike – Code Snippets",
+  "Eldritch Madness – Code Snippets",
+];
+
+
+  const screenshotsContainer = document.querySelector('.project-screenshots');
+
+function updateScreenshots() {
+  screenshotsContainer.innerHTML = ''; // clear old screenshots
+
+  projectScreenshots[activeIndex].forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Project screenshot';
+    screenshotsContainer.appendChild(img);
+  });
+}
+
 
   function createMediaElement(media) {
   if (media.type === 'video') {
@@ -271,10 +329,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const description = activeCard.getAttribute('data-description');
 
     document.getElementById('project-title').textContent = title;
-    document.getElementById('project-description').textContent = description;
+    document.getElementById('project-description').innerHTML = description;
+    document.querySelector('.screenshots-header').textContent = screenshotHeaders[activeIndex];
+
 
     currentMediaIndex = 0;
     updateMainMedia();
+
+    updateScreenshots();
   }
 
   nextBtn.addEventListener('click', () => {
@@ -289,6 +351,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateCarousel(); // Initialize
   window.addEventListener('resize', updateCarousel);
+
+
+  const imageModal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+
+  screenshotsContainer.addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG') {
+      modalImage.src = e.target.src;
+      imageModal.style.display = 'flex';
+    }
+  });
+
+   document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      imageModal.style.display = 'none';
+    }
+  });
+
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal) {
+      imageModal.style.display = 'none';
+    }
+  });
 });
 </script>
 </body>
