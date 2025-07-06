@@ -100,6 +100,16 @@
                 data-target="project1-detail">
                     <img src="https://img.itch.zone/aW1nLzE1NjM1MDMwLnBuZw==/original/E%2BVc%2Fz.png" alt="Project 4">
                 </div>
+                                <div class="project-card" data.target="project5-detail"
+                data-title="CATastrophe Cafe"
+                data-description="CATastrophe Cafe is a game where you play as a barrista, in a cafe where you have to serve customers. You can make drinks and unlock more recipes as you progress. The game is based on a time limit per day and the full game takes place in a week. Each day has its own events which makes the game more chaotic. <br> <br>
+                Personal Work <br>
+                Player, Physics Grabbing, GameLoop, Day/Week System in Gamemanager, Customer Behaviour, Fire/Rushhour Event" 
+                data-video="videos/Temp_Video.mp4"
+                data-target="project1-detail">
+
+                    <img src="images/Temp_Picture.jpg" alt="Project 5">
+                </div>
             </div>
             <button class="carousel-btn next">&#10095</button>
         </div>
@@ -146,7 +156,10 @@
     </section>
 
 <div class="image-modal" id="imageModal">
-  <img src="" alt="Enlarged Screenshot" id="modalImage">
+  <div class="modal-content">
+  <img src="" alt="Enlarged Screenshot" id="modalImage"/>
+  <p id="modalDescription"></p>
+  </div>
 </div>
 
 
@@ -187,8 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mediaData = [
     [ // Project 1
       { type: 'youtube', src: 'https://www.youtube.com/embed/ZRwRrXA0m1k?autoplay=1&mute=1%22%3E' },
-      { type: 'image', src: 'images/img1.jpg' },
-      { type: 'image', src: 'images/img2.jpg' },
+      { type: 'image', src: 'images/OrdersSandra.png' },
+      { type: 'image', src: 'images/BurnedPanSandra.png' },
     ],
     [ // Project 2
       { type: 'youtube', src: 'https://www.youtube.com/embed/Sm2x2u5IcpQ?autoplay=1&mute=1%22%3E' },
@@ -206,19 +219,24 @@ document.addEventListener('DOMContentLoaded', () => {
       { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png' },
       { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png' },
       { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDY0Mi5wbmc=/original/0zDk97.png' },
+    ],
+    [
+      { type: 'youtube', src: 'https://www.youtube.com/embed/hZCPNBwWg1Y?autoplay=1&mute=1%22%3E ' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png' },
     ]
   ];
 
   const projectScreenshots = [
     [ // Project 1
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png',
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png',
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png',
+      'images/SandraCodeOrderCard.png',
+      'images/SandraCodeOrderManager.png',
+      'images/SandraCodeLineGenerator.png',
     ],
     [ // Project 2
-      'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTY4OC5wbmc=/original/oZwvLI.png',
-      'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTY4OS5wbmc=/original/z4HWHe.png',
-      'https://img.itch.zone/aW1hZ2UvMjc5NzAyMi8xNjcxMTcwMC5wbmc=/original/hUPjBC.png',
+      'images/TwinstickBulletCode.png',
+      'images/TwinstickSpreadshotCode.png',
     ],
     [ // Project 3
       'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png',
@@ -226,17 +244,50 @@ document.addEventListener('DOMContentLoaded', () => {
       'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png',
     ],
     [ // Project 4
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png',
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png',
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png',
+      'images/SCHMUPEnemyCode.png',
+    ],
+        [ // Project 5
+      'images/CafeCodeDay.png',
+      'images/CafeCodeGrabCup.png',
+      'images/CafeCodeFireEvent.png',
     ]
   ]
+
+  const screenshotDescription = [
+    [
+    "Code snippet sandra one",
+    "Code snippet two",
+    "Code snippet three",
+  ],
+  [
+    "Code snippet one",
+    "Code snippet two",
+    "Code snippet three",
+  ],
+  [
+     "Code snippet one",
+    "Code snippet two",
+    "Code snippet three",
+  ],
+  [
+    "Code snippet one",
+    "Code snippet two",
+    "Code snippet three",
+  ],
+  [
+    "Code snippet one",
+    "Code snippet two",
+    "Code snippet three",
+  ]
+  ]
+
 
   const githubLinks = [
     'https://github.com/Fristey',
     'https://github.com/Fristey',
     'https://github.com/Fristey',
-    'https://github.com/Fristey',];
+    'https://github.com/Fristey',
+    'https://github.com/Fristey'];
     
 
   const screenshotHeaders = [
@@ -244,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
   "Diner Disaster – Code Snippets",
   "Roguelike – Code Snippets",
   "Eldritch Madness – Code Snippets",
+  "CATastrophe Cafe – Code Snippets",
 ];
 
 
@@ -350,7 +402,8 @@ function updateScreenshots() {
     currentMediaIndex = 0;
     updateMainMedia();
 
-    updateScreenshots();
+    showScreenshotsForProject(activeIndex);
+
   }
 
   nextBtn.addEventListener('click', () => {
@@ -367,27 +420,51 @@ function updateScreenshots() {
   window.addEventListener('resize', updateCarousel);
 
 
-  const imageModal = document.getElementById('imageModal');
-  const modalImage = document.getElementById('modalImage');
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const modalDescription = document.getElementById('modalDescription');
 
-  screenshotsContainer.addEventListener('click', (e) => {
-    if (e.target.tagName === 'IMG') {
-      modalImage.src = e.target.src;
-      imageModal.style.display = 'flex';
-    }
-  });
+document.querySelector(".project-screenshots").addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG') {
+    const projectIndex = parseInt(e.target.dataset.projectIndex, 10);
+    const screenshotIndex = parseInt(e.target.dataset.screenshotIndex, 10);
 
-   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      imageModal.style.display = 'none';
-    }
-  });
+    const description = screenshotDescription?.[projectIndex]?.[screenshotIndex] || "No description available.";
 
-  imageModal.addEventListener('click', (e) => {
-    if (e.target === imageModal) {
-      imageModal.style.display = 'none';
-    }
+    modalImage.src = e.target.src;
+    modalDescription.textContent = description;
+    imageModal.style.display = 'flex';
+  }
+});
+
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    imageModal.style.display = 'none';
+  }
+});
+
+imageModal.addEventListener('click', (e) => {
+  if (e.target === imageModal) {
+    imageModal.style.display = 'none';
+  }
+});
+
+
+  function showScreenshotsForProject(index) {
+  const container = document.querySelector(".project-screenshots");
+  container.innerHTML = "";
+
+  projectScreenshots[index].forEach((src, screenshotIndex) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.dataset.projectIndex = index;
+    img.dataset.screenshotIndex = screenshotIndex;
+    img.style.cursor = "pointer";
+    container.appendChild(img);
   });
+}
+
 });
 </script>
 </body>

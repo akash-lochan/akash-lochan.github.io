@@ -126,6 +126,7 @@ nav .navlinks li a{
 }
 
 .hero-text{
+    
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -133,12 +134,12 @@ nav .navlinks li a{
 
 .hero-text h5{
     color: #e5e5e5;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .hero-text h5 span{
     color: #BF40BF;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .hero-text h1{
@@ -268,6 +269,7 @@ nav .navlinks li a{
     }
 
     .aboutmetext{
+        background: rgba(191, 64, 191, 0.1);
         margin-top: 0;
         padding: 1rem;
         max-width: 90%;
@@ -666,5 +668,23 @@ section {
     max-height: 90%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal .modal-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: white;
+    text-align: center;
+    gap: 1rem;
+}
+
+.image-modal p {
+    max-width: 90%;
+    font-size: 1rem;
+    line-height: 1.4;
+    background: rgba(0,0,0,0.6);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
 }
 
