@@ -23,7 +23,7 @@ body{
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: #222;
+    background: #1C1C27;
 }
 .wrapper{
     width:100%;
@@ -49,7 +49,7 @@ header{
 .logo{
     height: 70px;
     width: 70px;
-    background-color: #BF40BF;
+    background-color: #A259FF;
     border-radius: 50%;
     color: #fff;
     font-weight: 700;
@@ -79,7 +79,7 @@ nav .togglebtn{
 
 nav .togglebtn span{
     display: block;
-    background-color: #BF40BF;
+    background-color: #A259FF;
     margin: 5px 0px;
     width: 100%;
     height: 3px;
@@ -95,7 +95,7 @@ nav .navlinks li{
 }
 
 nav .navlinks li a{
-    color: #BF40BF;
+    color: #A259FF;
     margin-right: 2.5rem;
 }
 
@@ -111,7 +111,7 @@ nav .navlinks li a{
     height: 600px;
     border-radius: 50%;
     overflow: hidden;
-    border: 15px solid #444;
+    border: 15px solid #363652;
     box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
 }
 
@@ -138,7 +138,7 @@ nav .navlinks li a{
 }
 
 .hero-text h5 span{
-    color: #BF40BF;
+    color: #A259FF;
     font-size: 20px;
 }
 
@@ -158,24 +158,24 @@ nav .navlinks li a{
 .btn-group .btn{
     border-color: #d5d5d5;
     color: #fff;
-    background-color: #444;
+    background-color: #363652;
     padding: 12px 25px;
     margin: 5px 0px;
     margin-right: 7px;
     border-radius: 30px;
-    border: 2px solid #BF40BF;
+    border: 2px solid #A259FF;
     box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
 }
 
 .btn-group .btn:hover{
-    background-color: #BF40BF;
+    background-color: #A259FF;
     color: #fff;
-    border-color: #BF40BF;
+    border-color: #A259FF;
     box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
 }
 
 .btn.activate{
-    border-color:#BF40BF ;
+    border-color:#A259FF ;
 }
 
 .hero-text .social i{
@@ -186,7 +186,7 @@ nav .navlinks li a{
 }
 
 .hero-text .social i:hover{
-    color: #BF40BF;
+    color: #A259FF;
     transform:rotate(360deg);
 }
 .profilepic img{
@@ -227,7 +227,7 @@ nav .navlinks li a{
         bottom:0;
         width: 60%;
         height: 100vh;
-        background-color: #222;
+        background-color: #1C1C27;
         z-index: 3;
         box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
         transition: 0.5px;
@@ -339,7 +339,6 @@ nav .navlinks li a{
         gap: 2rem;
         margin-top: 2rem;
         padding-left: 0;
-
     }
     .project-video{
         width: 100%;
@@ -390,7 +389,7 @@ section {
 
 #about{
     position: relative;
-    background-color: #333;
+    background-color: #29293d;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -470,7 +469,7 @@ section {
 .back-btn{
     margin-top: 2rem;
     padding: 10px 20px;
-    background-color: #007ced;
+    background-color: #00B4D8;
     border: none;
     color: #fff;
     font-size: 1rem;
@@ -479,7 +478,7 @@ section {
 }
 
 #contact{
-    background-color: #222;
+    background-color: #1C1C27;
     color: #fff;
 }
 
@@ -510,6 +509,12 @@ section {
     opacity: 0.5;
     transform: scale(0.8);
     cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 5px 20px rgba(162, 89, 255, 0.5);
 }
 
 .project-card img{
@@ -553,6 +558,7 @@ section {
     color: white;
     padding-left: 2rem;
     max-width: 1200px;
+    margin: 0 auto 1rem auto;
 }
 
 .project-video video{
@@ -585,13 +591,13 @@ section {
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
-    background: #FF69B4;
+    background: #FF7F50;
     border: none;
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
     padding: 1rem;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 70%;
 }
 
 .project-video .carousel-btn.prev{
@@ -649,7 +655,7 @@ section {
 }
 
 .socialwork i:hover {
-    color: #BF40BF;
+    color: #A259FF;
     transform:rotate(360deg);
     transition: transform 0.5s ease, color 0.5s ease;
 }

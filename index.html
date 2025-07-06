@@ -396,16 +396,17 @@ function updateScreenshots() {
     const activeCard = cards[activeIndex];
     const title = activeCard.getAttribute('data-title');
     const description = activeCard.getAttribute('data-description');
+    const githubIcon = document.querySelector('.socialwork a');
 
     document.getElementById('project-title').textContent = title;
     document.getElementById('project-description').innerHTML = description;
     document.querySelector('.screenshots-header').textContent = screenshotHeaders[activeIndex];
+    githubIcon.href = githubLinks[activeIndex];
     
     currentMediaIndex = 0;
     updateMainMedia();
 
     showScreenshotsForProject(activeIndex);
-
   }
 
   nextBtn.addEventListener('click', () => {
