@@ -35,7 +35,7 @@
             </header>
             <div class="container">
                 <div class="hero-pic">
-                    <img src="images/Temp_Picture.jpg" alt="profile pic">
+                    <img src="images/FOTO.jpg" alt="profile pic">
                 </div>
                 <div class="hero-text">
                     <h5> Hi I'm a <span class="input"> Game Developer :D</span></h5>
@@ -89,7 +89,7 @@
                 data-video="videos/Temp_Video.mp4"
                 data-target="project1-detail">
 
-                    <img src="images/Temp_Picture.jpg" alt="Project 3">
+                    <img src="images/RoguelikeLogo.png" alt="Project 3">
                 </div>
                 <div class="project-card" data.target="project4-detail"
                 data-title="Eldritch Madness"
@@ -108,7 +108,7 @@
                 data-video="videos/Temp_Video.mp4"
                 data-target="project1-detail">
 
-                    <img src="images/Temp_Picture.jpg" alt="Project 5">
+                    <img src="images/CatastrophyLogo.png" alt="Project 5">
                 </div>
             </div>
             <button class="carousel-btn next">&#10095</button>
@@ -136,6 +136,7 @@
         <div class="aboutcontainer">
           <div class="aboutmetext">
             <h2>About Me</h2>
+            <br>
             <p>My name is Akash, I am a GameDeveloper in Unity, mainly working with C#. I also have coding experience with HTML & CSS. What motivates me the most is the desire to keep learning and growing every day. I enjoy exploring new ideas and challenges, even if i sometimes need guidance to get up to speed so i can get in the right workflow. I want to be a programmer because I love the creative freedom it offers, the ability to build almost anything you can is what excited me the most.</p>
           </div>
                    
@@ -146,11 +147,12 @@
             <img src="images/csharp.png" alt="C# Logo">
             <img src="images/html.png" alt="HTML Logo">
             <img src="images/css.png" alt="CSS Logo">
+            <img src="images/javascript.png" alt="Javascript Logo">
           </div>
           </div>
           </div>
           <div class="profilepic">
-            <img src="images/Temp_Picture.jpg" alt="profile pic">
+            <img src="images/FOTO.jpg" alt="profile pic">
           </div>
  
     </section>
@@ -211,7 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     [ // Project 3
       { type: 'youtube', src: 'https://www.youtube.com/embed/sKpe6155nq8?autoplay=1&mute=1%22%3E'},
-      { type: 'image', src: 'images/img4.jpg' },
+      { type: 'image', src: 'images/RoguelikeScreenshot1.png' },
+      { type: 'image', src: 'images/RoguelikeScreenshot2.png' },
+      { type: 'image', src: 'images/RoguelikeScreenshot3.png' },
     ],
     [ // Project 4
       { type: 'youtube', src: 'https://www.youtube.com/embed/sbDSPoUuuos?autoplay=1&mute=1%22%3E ' },
@@ -222,9 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     [
       { type: 'youtube', src: 'https://www.youtube.com/embed/hZCPNBwWg1Y?autoplay=1&mute=1%22%3E ' },
-      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png' },
-      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png' },
-      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjUwMC5qcGc=/original/D3UX3n.jpg' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjQ5OC5qcGc=/original/Prs5Mq.jpg' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjQ5OS5qcGc=/original/TccwN%2F.jpg' },
     ]
   ];
 
@@ -239,9 +243,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'images/TwinstickSpreadshotCode.png',
     ],
     [ // Project 3
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMS5wbmc=/original/6eWvM%2F.png',
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYwNS5wbmc=/original/s939IE.png',
-      'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDYxMC5wbmc=/original/ye81i6.png',
+      'images/RoguelikeUpgradeScreen.png',
+      'images/RoguelikeUpgradeScriptable.png',
+      'images/RogueLikeEnemySpawnpoint.png',
     ],
     [ // Project 4
       'images/SCHMUPEnemyCode.png',
@@ -255,39 +259,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const screenshotDescription = [
     [
-    "Code snippet sandra one",
-    "Code snippet two",
+    "This is the code for the ordercard setup, which is used for the values on the ordercard.",
+    "This is that creates the order, it chooses a random order from a list of scriptable objects and then sets the position of the ordercard so that they don't overlap. When an order is completed it calls the CompleteOrder function and then it removes the ordercard from the list and the position will be reset so it fits well.",
+    "This is the code that generated the line on an ingredient at the cutting-minigame. It uses a line render to display two lines vertically on the ingredient. It also checks if the lines don't overlap with eachother with the do-while looop.",
+  ],
+  [
+    "This is the code for the bullet, based on what collides with the bullet, it does something different. If the explosiveBullet bool is true, the bullet will do damage around it.",
+    "This is a simple shoot script that shots a bullet to the direction the player is facing. when the spreadShotUpgrade is activem it will shoot 5 bullets in a spreadshot pattern.",
     "Code snippet three",
   ],
   [
-    "Code snippet one",
-    "Code snippet two",
-    "Code snippet three",
+     "This is the code for the upgrade screen, when you get enough coins an upgrade screen will pop up and the game will pause, you can then choose from 3 random upgrades.",
+    "This is the code for the upgrade scriptable object, it contains the values for what the upgrade does, and all the information that is needed to display it on the upgrade screen.",
+    "This is the code for the enemy spawnpoint, it spawns enemies if the player comes close enough. It will also check for a spawnposition above the ground, so it spawns correctly.",
   ],
   [
-     "Code snippet one",
-    "Code snippet two",
-    "Code snippet three",
+    "This is the code for one of the enemies, this enemy moves in a wave pattern and shoots the player when it is close enough.",
   ],
   [
-    "Code snippet one",
-    "Code snippet two",
-    "Code snippet three",
-  ],
-  [
-    "Code snippet one",
-    "Code snippet two",
-    "Code snippet three",
+    "This is the code for the day system in the cafe, here i can set all the values for each day in the inspector because its a Serializable class.",
+    "This is the code for the cup grabbing, it uses a raycast to check if the player is looking at a cup and then it will grab it and place it in the players hand. It will have a physics like feeling when you hold it because it uses different ascpects of the rigidbody.",
+    "This is the code for the fire event, the coroutine checks with a layer if an object with a collider is burnable, and if it is, it will add the component and it will reactive the startfire function This way it spreads out around it.",
   ]
   ]
 
 
   const githubLinks = [
-    'https://github.com/Fristey',
-    'https://github.com/Fristey',
-    'https://github.com/Fristey',
-    'https://github.com/Fristey',
-    'https://github.com/Fristey'];
+    'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
+    'https://github.com/GLU-Gaming/twinstick-2024-Wrong-Order-Studios/tree/master/Assets/Developers/Akash/Scripts',
+    'https://github.com/Fristey/Roguelike/tree/main/Assets/Rogue%20Base%20Project/Scripts',
+    'https://github.com/GLU-Gaming/shmup-2024-team-13-keettie-gang/tree/main/Assets/Scripts',
+    'https://github.com/Fristey/Depresso/tree/main/Assets/Devs/Akash/Scripts'];
     
 
   const screenshotHeaders = [
