@@ -519,13 +519,6 @@ section {
     transform: scale(0.8);
     cursor: pointer;
 }
-
-.project-card:hover {
-    transform: scale(1.05);
-    opacity: 1;
-    box-shadow: 0 5px 20px rgba(162, 89, 255, 0.5);
-}
-
 .project-card img{
     width: 110%;
     height: 100%;
@@ -628,7 +621,8 @@ section {
 
 .project-screenshots {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 0rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -636,7 +630,7 @@ section {
 }
 
 .project-screenshots img {
-    width: 200px;
+    width: 400px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -683,8 +677,8 @@ section {
 }
 
 .image-modal img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -707,3 +701,27 @@ section {
     border-radius: 10px;
 }
 
+.screenshot-wrapper {
+  display: flex;
+  flex-direction: row; /* image left, text right */
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.screenshot-wrapper img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.screenshot-wrapper p {
+  max-width: 400px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.4;
+  background: rgba(0,0,0,0.6);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}

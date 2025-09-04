@@ -74,7 +74,7 @@
                 Face off against menacing waiters, hostile drones, and the head chef across three levels. Can you survive the chaos and save your beloved diner?
                 
                 Take on the enemies and show them who's boss! <br> <br>
-                <strong> Personal Work</strong> <br>
+                <h1> Personal Work</h1> <br>
                 Player, Movement, Dash, Shooting, Health<br>
                 Powerups, Explosive knife, Spreadshot<br>
                 GameLoop <br>
@@ -138,8 +138,7 @@
             <h2>About Me</h2>
             <br>
             <p>My name is Akash, I am a GameDeveloper in Unity, mainly working with C#. I also have coding experience with HTML & CSS. What motivates me the most is the desire to keep learning and growing every day. I enjoy exploring new ideas and challenges, even if i sometimes need guidance to get up to speed so i can get in the right workflow. I want to be a programmer because I love the creative freedom it offers, the ability to build almost anything you can is what excited me the most.</p>
-          </div>
-                   
+          </div>    
           <div class="skills">
             <h2>Skills</h2>
             <div class="skillicons">
@@ -149,6 +148,10 @@
             <img src="images/css.png" alt="CSS Logo">
             <img src="images/javascript.png" alt="Javascript Logo">
           </div>
+
+          </div>
+                    <div>
+            <p> akashlochan2005@gmail.com </p>
           </div>
           </div>
           <div class="profilepic">
@@ -225,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMjYyNDE2Mi8xNTYzNDY0Mi5wbmc=/original/0zDk97.png' },
     ],
     [
+      //Project 5
       { type: 'youtube', src: 'https://www.youtube.com/embed/hZCPNBwWg1Y?autoplay=1&mute=1%22%3E ' },
       { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjUwMC5qcGc=/original/D3UX3n.jpg' },
       { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjQ5OC5qcGc=/original/Prs5Mq.jpg' },
@@ -291,6 +295,12 @@ document.addEventListener('DOMContentLoaded', () => {
     'https://github.com/GLU-Gaming/shmup-2024-team-13-keettie-gang/tree/main/Assets/Scripts',
     'https://github.com/Fristey/Depresso/tree/main/Assets/Devs/Akash/Scripts'];
     
+    const itchLinks = [
+      'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
+      'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
+      'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
+      'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
+    ];
 
   const screenshotHeaders = [
   "Cooking Sandra – Code Snippets",
@@ -306,11 +316,20 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateScreenshots() {
   screenshotsContainer.innerHTML = ''; // clear old screenshots
 
-  projectScreenshots[activeIndex].forEach(src => {
+  projectScreenshots[activeIndex].forEach((src, screenshotIndex) => {
+    const screenshotWrapper = document.createElement('div');
+    screenshotWrapper.classList.add('screenshot-wrapper');
+
     const img = document.createElement('img');
     img.src = src;
     img.alt = 'Project screenshot';
-    screenshotsContainer.appendChild(img);
+
+    const desc = document.createElement('p');
+    desc.textContent = screenshotDescription[activeIndex][screenshotIndex] || "No description available.";
+
+    screenshotWrapper.appendChild(img);
+    screenshotWrapper.appendChild(desc);
+    screenshotsContainer.appendChild(screenshotWrapper);
   });
 }
 
@@ -338,7 +357,7 @@ function updateScreenshots() {
     const iframe = document.createElement('iframe');
     iframe.src = media.src;
     iframe.width = "800";
-    iframe.height = "450";  // 16:9 aspect ratio
+    iframe.height = "450";
     iframe.frameBorder = "0";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
     iframe.allowFullscreen = true;
@@ -406,7 +425,7 @@ function updateScreenshots() {
     currentMediaIndex = 0;
     updateMainMedia();
 
-    showScreenshotsForProject(activeIndex);
+    updateScreenshots();
   }
 
   nextBtn.addEventListener('click', () => {
@@ -435,7 +454,6 @@ document.querySelector(".project-screenshots").addEventListener('click', (e) => 
     const description = screenshotDescription?.[projectIndex]?.[screenshotIndex] || "No description available.";
 
     modalImage.src = e.target.src;
-    modalDescription.textContent = description;
     imageModal.style.display = 'flex';
   }
 });
@@ -454,17 +472,29 @@ imageModal.addEventListener('click', (e) => {
 });
 
 
-  function showScreenshotsForProject(index) {
-  const container = document.querySelector(".project-screenshots");
-  container.innerHTML = "";
+ function updateScreenshots() {
+  const container = document.querySelector('.project-screenshots');
+  container.innerHTML = ''; // clear old screenshots
 
-  projectScreenshots[index].forEach((src, screenshotIndex) => {
-    const img = document.createElement("img");
+  projectScreenshots[activeIndex].forEach((src, screenshotIndex) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'screenshot-wrapper';
+
+    const img = document.createElement('img');
     img.src = src;
-    img.dataset.projectIndex = index;
-    img.dataset.screenshotIndex = screenshotIndex;
-    img.style.cursor = "pointer";
-    container.appendChild(img);
+    img.alt = 'Project screenshot';
+
+    img.dataset.projectIndex = String(activeIndex);
+    img.dataset.screenshotIndex = String(screenshotIndex);
+    img.style.cursor = 'zoom-in';
+
+    const desc = document.createElement('p');
+    desc.className = 'screenshot-desc';
+    desc.textContent = (screenshotDescription?.[activeIndex]?.[screenshotIndex]) || 'No description available.';
+
+    wrap.appendChild(img);
+    wrap.appendChild(desc);
+    container.appendChild(wrap);
   });
 }
 
