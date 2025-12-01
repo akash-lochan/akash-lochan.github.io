@@ -393,24 +393,22 @@ nav .navlinks li a{
     padding: 0 1rem;
 }
 
-.image-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
+  .image-modal .modal-content {
+    flex-direction: column !important;  
+    align-items: center !important;    
+    text-align: center !important;
+    gap: 0.75rem;                 
+  }
 
-.image-modal img {
-    max-width: 95%;
-    max-height: 95%;
-    object-fit: contain;
-}
+  .image-modal img {
+    max-width: 95% !important;        
+    height: auto !important;
+  }
+
+  .image-modal p {
+    max-width: 90% !important;
+    font-size: 1rem;
+  }
 
 
 .project-video video,
@@ -506,24 +504,22 @@ nav .navlinks li a{
     padding: 0 1rem;
 }
 
-.image-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
+  .image-modal .modal-content {
+    flex-direction: column !important;  
+    align-items: center !important;    
+    text-align: center !important;
+    gap: 0.75rem;                      
+  }
 
-.image-modal img {
-    max-width: 95%;
-    max-height: 95%;
-    object-fit: contain;
-}
+  .image-modal img {
+    max-width: 95% !important;       
+    height: auto !important;
+  }
+
+  .image-modal p {
+    max-width: 90% !important;
+    font-size: 1rem;
+  }
 
 
 }
