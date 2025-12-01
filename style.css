@@ -380,15 +380,17 @@ nav .navlinks li a{
 
 .screenshot-wrapper img {
     width: 100% !important;
-    max-width: 90vw !important;
     height: auto !important;
     margin: 0 auto !important;
+    max-width: none !important;
 }
 
 .screenshot-wrapper p {
-    max-width: 90vw !important;
+    max-width: 100% !important;
     margin: 0.5rem auto 0 auto !important;
     text-align: center !important;
+    box-sizing: border-box;
+    padding: 0 1rem;
 }
 
 .project-video video,
@@ -471,15 +473,17 @@ nav .navlinks li a{
 
 .screenshot-wrapper img {
     width: 100% !important;
-    max-width: 90vw !important;
     height: auto !important;
     margin: 0 auto !important;
+    max-width: none !important;
 }
 
 .screenshot-wrapper p {
-    max-width: 90vw !important;
+    max-width: 100% !important;
     margin: 0.5rem auto 0 auto !important;
     text-align: center !important;
+    box-sizing: border-box;
+    padding: 0 1rem;
 }
 
 
