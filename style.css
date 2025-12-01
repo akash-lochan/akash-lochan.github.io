@@ -373,6 +373,8 @@ nav .navlinks li a{
     justify-content: center !important;
     text-align: center !important;
     margin: 0 auto !important;
+        margin-left: auto !important;
+    margin-right: auto !important;
     width: 100%;
 }
 
@@ -462,6 +464,8 @@ nav .navlinks li a{
     justify-content: center !important;
     text-align: center !important;
     margin: 0 auto !important;
+        margin-left: auto !important;
+    margin-right: auto !important;
     width: 100%;
 }
 
