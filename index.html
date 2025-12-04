@@ -126,7 +126,9 @@
         <h3 class="screenshots-header"></h3>
                   <div class="project-screenshots"> </div>
                           <div class="socialwork">
-          <a href="https://github.com/Fristey" target = "_blank"><i class="fa-brands fa-github"></i></a>
+              <a id="githubLink" href="#" target="_blank"><i class="fa-brands fa-github"></i>
+          <a id="itchLink" href="#" target="_blank"> <i class="fa-brands fa-itch-io"></i></a> 
+          
         </div>
         </div>
 
@@ -300,6 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
       'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
       'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
+      'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts'
     ];
 
   const screenshotHeaders = [
@@ -415,12 +418,14 @@ function updateScreenshots() {
     const activeCard = cards[activeIndex];
     const title = activeCard.getAttribute('data-title');
     const description = activeCard.getAttribute('data-description');
-    const githubIcon = document.querySelector('.socialwork a');
+    const githubIcon = document.querySelector('#githubLink');
+    const itchIcon = document.querySelector('#itchLink')
 
     document.getElementById('project-title').textContent = title;
     document.getElementById('project-description').innerHTML = description;
     document.querySelector('.screenshots-header').textContent = screenshotHeaders[activeIndex];
     githubIcon.href = githubLinks[activeIndex];
+    itchIcon.href = itchLinks[activeIndex];
     
     currentMediaIndex = 0;
     updateMainMedia();
