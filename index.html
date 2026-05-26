@@ -60,12 +60,14 @@
             <div class="carousel-container">
             <button class="carousel-btn prev">&#10094</button>
             <div class="carousel-track">
-                <div class="project-card" data.target="project1-detail"
-                data-title="Cooking Sandra"
-                data-description="In this game you play as a chef named Sandra. While playing you get orders which each have a time limit, and based on how fast you complete the orders you get points. You can complete orders by preparing ingredients by playing various minigames."
-                data-video="videos/video1.mp4"
+                <div class="project-card" data.target="project5-detail"
+                data-title="CATastrophe Cafe"
+                data-description="CATastrophe Cafe is a game where you play as a barrista, in a cafe where you have to serve customers. You can make drinks and unlock more recipes as you progress. The game is based on a time limit per day and the full game takes place in a week. Each day has its own events which makes the game more chaotic. <br> <br>
+                Personal Work <br>
+                Player, Physics Grabbing, GameLoop, Day/Week System in Gamemanager, Customer Behaviour, Fire/Rushhour Event" 
+                data-video="videos/Temp_Video.mp4"
                 data-target="project1-detail">
-                    <img src="images/Sandra.png" alt="Project 1">
+                 <img src="images/CatastrophyLogo.png" alt="Project 5">
                 </div>
                 <div class="project-card" data.target="project2-detail"
                 data-title="Diner Disaster"
@@ -100,15 +102,12 @@
                 data-target="project1-detail">
                     <img src="https://img.itch.zone/aW1nLzE1NjM1MDMwLnBuZw==/original/E%2BVc%2Fz.png" alt="Project 4">
                 </div>
-                                <div class="project-card" data.target="project5-detail"
-                data-title="CATastrophe Cafe"
-                data-description="CATastrophe Cafe is a game where you play as a barrista, in a cafe where you have to serve customers. You can make drinks and unlock more recipes as you progress. The game is based on a time limit per day and the full game takes place in a week. Each day has its own events which makes the game more chaotic. <br> <br>
-                Personal Work <br>
-                Player, Physics Grabbing, GameLoop, Day/Week System in Gamemanager, Customer Behaviour, Fire/Rushhour Event" 
-                data-video="videos/Temp_Video.mp4"
+                 <div class="project-card" data.target="project1-detail"
+                data-title="Cooking Sandra"
+                data-description="In this game you play as a chef named Sandra. While playing you get orders which each have a time limit, and based on how fast you complete the orders you get points. You can complete orders by preparing ingredients by playing various minigames."
+                data-video="videos/video1.mp4"
                 data-target="project1-detail">
-
-                    <img src="images/CatastrophyLogo.png" alt="Project 5">
+                <img src="images/Sandra.png" alt="Project 1">
                 </div>
             </div>
             <button class="carousel-btn next">&#10095</button>
@@ -206,9 +205,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Media data (add images/videos here for each project)
   const mediaData = [
     [ // Project 1
-      { type: 'youtube', src: 'https://www.youtube.com/embed/ZRwRrXA0m1k?autoplay=1&mute=1%22%3E' },
-      { type: 'image', src: 'images/OrdersSandra.png' },
-      { type: 'image', src: 'images/BurnedPanSandra.png' },
+      { type: 'youtube', src: 'https://www.youtube.com/embed/hZCPNBwWg1Y?autoplay=1&mute=1%22%3E ' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjUwMC5qcGc=/original/D3UX3n.jpg' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjQ5OC5qcGc=/original/Prs5Mq.jpg' },
+      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjQ5OS5qcGc=/original/TccwN%2F.jpg' },
     ],
     [ // Project 2
       { type: 'youtube', src: 'https://www.youtube.com/embed/Sm2x2u5IcpQ?autoplay=1&mute=1%22%3E' },
@@ -231,18 +231,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     [
       //Project 5
-      { type: 'youtube', src: 'https://www.youtube.com/embed/hZCPNBwWg1Y?autoplay=1&mute=1%22%3E ' },
-      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjUwMC5qcGc=/original/D3UX3n.jpg' },
-      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjQ5OC5qcGc=/original/Prs5Mq.jpg' },
-      { type: 'image', src: 'https://img.itch.zone/aW1hZ2UvMzY4OTg3NS8yMTk4NjQ5OS5qcGc=/original/TccwN%2F.jpg' },
+      { type: 'youtube', src: 'https://www.youtube.com/embed/ZRwRrXA0m1k?autoplay=1&mute=1%22%3E' },
+      { type: 'image', src: 'images/OrdersSandra.png' },
+      { type: 'image', src: 'images/BurnedPanSandra.png' },
     ]
   ];
 
   const projectScreenshots = [
     [ // Project 1
-      'images/SandraCodeOrderCard.png',
-      'images/SandraCodeOrderManager.png',
-      'images/SandraCodeLineGenerator.png',
+      'images/CafeCodeDay.png',
+      'images/CafeCodeGrabCup.png',
+      'images/CafeCodeFireEvent.png',
     ],
     [ // Project 2
       'images/TwinstickBulletCode.png',
@@ -256,18 +255,18 @@ document.addEventListener('DOMContentLoaded', () => {
     [ // Project 4
       'images/SCHMUPEnemyCode.png',
     ],
-        [ // Project 5
-      'images/CafeCodeDay.png',
-      'images/CafeCodeGrabCup.png',
-      'images/CafeCodeFireEvent.png',
+    [ // Project 5
+      'images/SandraCodeOrderCard.png',
+      'images/SandraCodeOrderManager.png',
+      'images/SandraCodeLineGenerator.png',
     ]
   ]
 
   const screenshotDescription = [
     [
-    "This is the code for the ordercard setup, which is used for the values on the ordercard.",
-    "This is that creates the order, it chooses a random order from a list of scriptable objects and then sets the position of the ordercard so that they don't overlap. When an order is completed it calls the CompleteOrder function and then it removes the ordercard from the list and the position will be reset so it fits well.",
-    "This is the code that generated the line on an ingredient at the cutting-minigame. It uses a line render to display two lines vertically on the ingredient. It also checks if the lines don't overlap with eachother with the do-while looop.",
+    "This is the code for the day system in the cafe, here i can set all the values for each day in the inspector because its a Serializable class.",
+    "This is the code for the cup grabbing, it uses a raycast to check if the player is looking at a cup and then it will grab it and place it in the players hand. It will have a physics like feeling when you hold it because it uses different ascpects of the rigidbody.",
+    "This is the code for the fire event, the coroutine checks with a layer if an object with a collider is burnable, and if it is, it will add the component and it will reactive the startfire function This way it spreads out around it.",
   ],
   [
     "This is the code for the bullet, based on what collides with the bullet, it does something different. If the explosiveBullet bool is true, the bullet will do damage around it.",
@@ -283,34 +282,36 @@ document.addEventListener('DOMContentLoaded', () => {
     "This is the code for one of the enemies, this enemy moves in a wave pattern and shoots the player when it is close enough.",
   ],
   [
-    "This is the code for the day system in the cafe, here i can set all the values for each day in the inspector because its a Serializable class.",
-    "This is the code for the cup grabbing, it uses a raycast to check if the player is looking at a cup and then it will grab it and place it in the players hand. It will have a physics like feeling when you hold it because it uses different ascpects of the rigidbody.",
-    "This is the code for the fire event, the coroutine checks with a layer if an object with a collider is burnable, and if it is, it will add the component and it will reactive the startfire function This way it spreads out around it.",
+    "This is the code for the ordercard setup, which is used for the values on the ordercard.",
+    "This is that creates the order, it chooses a random order from a list of scriptable objects and then sets the position of the ordercard so that they don't overlap. When an order is completed it calls the CompleteOrder function and then it removes the ordercard from the list and the position will be reset so it fits well.",
+    "This is the code that generated the line on an ingredient at the cutting-minigame. It uses a line render to display two lines vertically on the ingredient. It also checks if the lines don't overlap with eachother with the do-while looop.",
   ]
   ]
 
 
   const githubLinks = [
-    'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
+    'https://github.com/Fristey/Depresso/tree/main/Assets/Devs/Akash/Scripts',
     'https://github.com/GLU-Gaming/twinstick-2024-Wrong-Order-Studios/tree/master/Assets/Developers/Akash/Scripts',
     'https://github.com/Fristey/Roguelike/tree/main/Assets/Rogue%20Base%20Project/Scripts',
     'https://github.com/GLU-Gaming/shmup-2024-team-13-keettie-gang/tree/main/Assets/Scripts',
-    'https://github.com/Fristey/Depresso/tree/main/Assets/Devs/Akash/Scripts'];
+    'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts'];
     
     const itchLinks = [
-      'https://fristey.itch.io/cooking-sandra',
+      'https://dark-knight8092.itch.io/catastrophy-cafe',
       'https://glitchpower64.itch.io/diner-disaster',
       'https://github.com/Fristey/CookingSandra/tree/main/Assets/Scripts',
       'https://joy888.itch.io/eldritch-madness',
-      'https://dark-knight8092.itch.io/catastrophy-cafe'
+      'https://fristey.itch.io/cooking-sandra'
+      
     ];
 
   const screenshotHeaders = [
-  "Cooking Sandra – Code Snippets",
+  
+  "CATastrophe Cafe – Code Snippets",
   "Diner Disaster – Code Snippets",
   "Roguelike – Code Snippets",
   "Eldritch Madness – Code Snippets",
-  "CATastrophe Cafe – Code Snippets",
+  ,"Cooking Sandra – Code Snippets"
 ];
 
 
